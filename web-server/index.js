@@ -39,7 +39,10 @@ app.get('/api/v1/users', function (req, res) {
     });
 });
 
-app.listen(3000, function(){
+//サーバーの実行環境の情報取得(herokuのサーバー)
+//ローカルの時は3000
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, function(){
     console.log('こんばんちゃ')
 });
 
